@@ -8,7 +8,7 @@ const Cart = () => {
   const totalAmount = cart.reduce((a, b) => a + b.price, 0);
   return (
     <div className="flex-col md:flex-row items-center  w-full h-full flex flex-wrap justify-center ">
-      <div className="flex flex-wrap justify-center items-center w-[65vw] gap-3">
+      <div className="flex flex-wrap justify-center md:items-center w-[65vw] gap-3">
         {cart.length > 0 ? (
           cart.map((item) => <CartItems key={item.id} item={item} />)
         ) : (
@@ -26,7 +26,7 @@ const Cart = () => {
         )}
       </div>
       {cart.length > 0 ? (
-        <div className="w-full text-center md:w-[32vw] h-full mt-4 p-3">
+        <div className="w-full   md:w-[32vw] mt-4 p-3">
           <p className="text-xl md:text-2xl font-semibold md:font-bold text-green-600">
             YOUR CART
           </p>
